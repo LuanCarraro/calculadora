@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <container id = "container1">
+    <div id = "Barra">
+
+    </div>
+    </container>
+    
+    <container id = "container2">
+    <div class = "grid-container"id = "teclado">
+    <div class="grid-item" style="grid-column: 1 / 2; grid-row: 1 / 2;" onclick="showValue(this)">1</div>
+    <div class="grid-item" style="grid-column: 2 / 3; grid-row: 1 / 2;" onclick="showValue(this)">2</div>
+    <div class="grid-item" style="grid-column: 3 / 4; grid-row: 1 / 2;" onclick="showValue(this)">3</div>
+    <div class="grid-item" style="grid-column: 4 / 5; grid-row: 1 / 2;" onclick="showValue(this)">+</div>
+
+    <div class="grid-item" style="grid-column: 1 / 2; grid-row: 2 / 3;" onclick="showValue(this)">4</div>
+    <div class="grid-item" style="grid-column: 2 / 3; grid-row: 2 / 3;" onclick="showValue(this)">5</div>
+    <div class="grid-item" style="grid-column: 3 / 4; grid-row: 2 / 3;" onclick="showValue(this)">6</div>
+    <div class="grid-item" style="grid-column: 4 / 5; grid-row: 2 / 3;" onclick="showValue(this)">-</div>
+
+    <div class="grid-item" style="grid-column: 1 / 2; grid-row: 3 / 4;" onclick="showValue(this)">7</div>
+    <div class="grid-item" style="grid-column: 2 / 3; grid-row: 3 / 4;" onclick="showValue(this)">8</div>
+    <div class="grid-item" style="grid-column: 3 / 4; grid-row: 3 / 4;" onclick="showValue(this)">9</div>
+    <div class="grid-item" style="grid-column: 4 / 5; grid-row: 3 / 4;" onclick="showValue(this)">*</div>
+
+    <div class="grid-item" style="grid-column: 1 / 2; grid-row: 4 / 5;" onclick="showValue(this)"> </div>
+    <div class="grid-item" style="grid-column: 2 / 3; grid-row: 4 / 5;" onclick="showValue(this)">0</div>
+    <div class="grid-item" style="grid-column: 3 / 4; grid-row: 4 / 5;" onclick="showValue(this)">=</div>
+    <div class="grid-item" style="grid-column: 4 / 5; grid-row: 4 / 5;" onclick="showValue(this)">/</div>
+    </div>
+</container>
+<script>
+    function showValue(item) {
+    var display = document.getElementById('Barra');
+    var currentValue = display.innerHTML;
+    var newItemValue = ' ' + item.innerHTML;
+    display.innerHTML = currentValue + newItemValue;
+}</script>
+</body>
+</html>
